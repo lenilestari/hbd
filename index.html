@@ -93,6 +93,29 @@
             transform: scale(1.05);
         }
 
+        /* HAMBURGER MENU */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        .hamburger:hover span {
+            background: #667eea;
+        }
+
         /* MAIN CONTAINER */
         .main-container {
             margin-top: 80px;
@@ -145,7 +168,7 @@
 
         .hero-content h1 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 10vw, 5rem);
+            font-size: clamp(1.8rem, 8vw, 5rem);
             color: white;
             margin-bottom: 0.5rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -153,7 +176,7 @@
         }
 
         .hero-content .birthday-name {
-            font-size: 3rem;
+            font-size: clamp(1.5rem, 7vw, 3rem);
             background: linear-gradient(135deg, #FFD700, #FFA500, #FF69B4);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -163,13 +186,13 @@
         }
 
         .hero-content p {
-            font-size: 1.3rem;
+            font-size: clamp(1rem, 4vw, 1.3rem);
             color: rgba(255, 255, 255, 0.9);
             margin: 1rem 0 2rem;
         }
 
         .birthday-date {
-            font-size: 1.2rem;
+            font-size: clamp(0.95rem, 3vw, 1.2rem);
             color: rgba(255, 255, 255, 0.8);
             margin-bottom: 2rem;
             font-weight: 500;
@@ -272,13 +295,13 @@
         /* ===== GALLERY SECTION ===== */
         .gallery-section {
             min-height: 100vh;
-            padding: 4rem 2rem;
+            padding: clamp(2rem, 5vw, 4rem) 1rem;
             background: white;
         }
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+            font-size: clamp(1.8rem, 6vw, 3rem);
             text-align: center;
             margin-bottom: 1rem;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -291,22 +314,24 @@
             text-align: center;
             color: #999;
             margin-bottom: 3rem;
-            font-size: 1.1rem;
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
+            padding: 0 1rem;
         }
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 1rem;
         }
 
         .gallery-item {
             position: relative;
             overflow: hidden;
             border-radius: 15px;
-            height: 300px;
+            height: clamp(150px, 50vw, 300px);
             background: #f0f0f0;
             cursor: pointer;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -361,16 +386,17 @@
         /* ===== WISHES SECTION ===== */
         .wishes-section {
             min-height: 100vh;
-            padding: 4rem 2rem;
+            padding: clamp(2rem, 5vw, 4rem) 1rem;
             background: linear-gradient(135deg, #f5f7ff 0%, #f0e4ff 100%);
         }
 
         .wishes-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 1rem;
         }
 
         .wish-card {
@@ -446,7 +472,7 @@
         }
 
         .wish-card-title {
-            font-size: 1.5rem;
+            font-size: clamp(1.1rem, 4vw, 1.5rem);
             font-weight: 700;
             margin-bottom: 1rem;
             display: flex;
@@ -457,7 +483,7 @@
         .wish-card p {
             line-height: 1.6;
             color: #555;
-            font-size: 0.95rem;
+            font-size: clamp(0.85rem, 3vw, 0.95rem);
         }
 
         .wish-card-icon {
@@ -492,16 +518,17 @@
         /* ===== GIFT IDEAS SECTION ===== */
         .gift-section {
             min-height: 100vh;
-            padding: 4rem 2rem;
+            padding: clamp(2rem, 5vw, 4rem) 1rem;
             background: white;
         }
 
         .gift-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 1rem;
         }
 
         .gift-card {
@@ -526,7 +553,7 @@
         }
 
         .gift-card h3 {
-            font-size: 1.3rem;
+            font-size: clamp(1rem, 3vw, 1.3rem);
             margin-bottom: 0.7rem;
             color: #333;
         }
@@ -535,6 +562,7 @@
             color: #666;
             line-height: 1.5;
             margin-bottom: 1rem;
+            font-size: clamp(0.85rem, 2.5vw, 0.95rem);
         }
 
         .gift-price {
@@ -620,7 +648,7 @@
         /* ===== BUSINESS SECTION ===== */
         .business-section {
             min-height: 100vh;
-            padding: 4rem 2rem;
+            padding: clamp(2rem, 5vw, 4rem) 1rem;
             background: linear-gradient(135deg, #0f0f1e 0%, #1a1a3e 50%, #2d1b4e 100%);
             position: relative;
             overflow: hidden;
@@ -650,7 +678,7 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             border-radius: 30px;
-            padding: 4rem 2rem;
+            padding: clamp(2rem, 5vw, 4rem);
             text-align: center;
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(255, 255, 255, 0.2);
@@ -658,7 +686,7 @@
 
         .coming-soon-title {
             font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+            font-size: clamp(1.8rem, 6vw, 3rem);
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -668,31 +696,32 @@
         }
 
         .coming-soon-icon {
-            font-size: 5rem;
+            font-size: clamp(3rem, 12vw, 5rem);
             margin: 1.5rem 0;
             animation: float 3s ease-in-out infinite;
         }
 
         .coming-soon-text {
-            font-size: 1.3rem;
+            font-size: clamp(1rem, 4vw, 1.3rem);
             color: #333;
             margin-bottom: 1rem;
             font-weight: 600;
         }
 
         .coming-soon-subtitle {
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 3vw, 1rem);
             color: #666;
             line-height: 1.6;
             margin-bottom: 2rem;
+            padding: 0 1rem;
         }
 
         .coming-soon-features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
             margin: 2.5rem 0;
-            padding: 2rem;
+            padding: clamp(1rem, 3vw, 2rem);
             background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(240, 147, 251, 0.05));
             border-radius: 20px;
             border: 1px solid rgba(102, 126, 234, 0.2);
@@ -724,7 +753,7 @@
         .feature-text {
             font-weight: 600;
             color: #333;
-            font-size: 0.95rem;
+            font-size: clamp(0.8rem, 2.5vw, 0.95rem);
         }
 
         .notify-section {
@@ -734,15 +763,16 @@
             margin: 2.5rem auto;
             flex-wrap: wrap;
             justify-content: center;
+            padding: 0 1rem;
         }
 
         .notify-input {
             flex: 1;
-            min-width: 250px;
-            padding: 1rem;
+            min-width: 200px;
+            padding: clamp(0.75rem, 2vw, 1rem);
             border: 2px solid #e0e0e0;
             border-radius: 15px;
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 3vw, 1rem);
             font-family: 'Poppins', sans-serif;
             transition: all 0.3s;
         }
@@ -754,7 +784,7 @@
         }
 
         .notify-btn {
-            padding: 1rem 2rem;
+            padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
@@ -762,7 +792,7 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 3vw, 1rem);
             box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
         }
 
@@ -783,22 +813,153 @@
         }
 
         /* RESPONSIVE */
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
+            .navbar {
+                padding: 0.8rem 1.5rem;
+            }
+
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+
             .nav-links {
                 gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .music-toggle {
+                padding: 0.4rem 0.8rem;
                 font-size: 0.9rem;
             }
+        }
 
-            .coming-soon-wrapper {
-                padding: 2rem 1.5rem;
+        @media (max-width: 768px) {
+            /* NAVBAR MOBILE */
+            .navbar {
+                padding: 0.8rem 1rem;
             }
 
-            .coming-soon-title {
-                font-size: 2rem;
+            .navbar-brand {
+                font-size: 1.1rem;
             }
 
-            .coming-soon-icon {
-                font-size: 3rem;
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background: white;
+                padding: 1rem 0;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+                gap: 0;
+                z-index: 999;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                padding: 0.8rem 1.5rem;
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            .nav-links a {
+                font-size: 1rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .music-toggle {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.8rem;
+            }
+
+            /* HERO */
+            .hero-section {
+                padding: 1rem 1rem;
+                min-height: 80vh;
+            }
+
+            .counter {
+                gap: 0.8rem;
+                margin: 1.5rem 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .counter-item {
+                padding: 1rem;
+                min-width: 70px;
+                font-size: 0.85rem;
+            }
+
+            .counter-item span {
+                font-size: 1.5rem;
+            }
+
+            .counter-item p {
+                font-size: 0.7rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
+                margin-top: 1.5rem;
+            }
+
+            .btn {
+                padding: 0.85rem 2rem;
+                font-size: 0.95rem;
+                width: 90%;
+                max-width: 300px;
+            }
+
+            /* GALLERY */
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                padding: 0;
+            }
+
+            .gallery-item {
+                height: 150px;
+            }
+
+            /* WISHES */
+            .wishes-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+                padding: 0;
+            }
+
+            .wish-card {
+                padding: 1.5rem;
+            }
+
+            /* GIFT */
+            .gift-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+                padding: 0;
+            }
+
+            .gift-card {
+                padding: 1.5rem;
+            }
+
+            .gift-icon {
+                font-size: 2.5rem;
+            }
+
+            /* BUSINESS */
+            .business-container {
+                max-width: 90%;
             }
 
             .coming-soon-features {
@@ -808,7 +969,7 @@
             }
 
             .feature-item {
-                padding: 1rem;
+                padding: 1rem 0.8rem;
             }
 
             .feature-icon {
@@ -817,35 +978,94 @@
 
             .notify-section {
                 flex-direction: column;
+                padding: 0 1rem;
             }
 
             .notify-input {
                 min-width: 100%;
             }
 
-            .section-title {
-                font-size: 2rem;
+            .notify-btn {
+                width: 100%;
             }
 
-            .hero-content h1 {
-                font-size: 2rem;
+            /* FOOTER */
+            .footer {
+                padding: 2rem 1rem;
             }
 
-            .hero-content .birthday-name {
-                font-size: 1.8rem;
+            .footer-details {
+                gap: 1rem;
+                flex-direction: column;
+            }
+
+            .footer-detail {
+                min-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* NAVBAR */
+            .navbar {
+                padding: 0.6rem 0.8rem;
+                height: 60px;
+            }
+
+            .navbar-brand {
+                font-size: 1rem;
+            }
+
+            .music-toggle {
+                padding: 0.3rem 0.6rem;
+                font-size: 0.75rem;
+            }
+
+            /* HERO */
+            .hero-section {
+                min-height: 85vh;
             }
 
             .counter {
                 gap: 0.5rem;
             }
 
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
+            .counter-item {
+                padding: 0.8rem;
+                min-width: 60px;
             }
 
-            .btn {
-                width: 100%;
+            /* GALLERY */
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+
+            .gallery-item {
+                height: 200px;
+            }
+
+            /* WISHES */
+            .wishes-grid {
+                gap: 1rem;
+            }
+
+            .wish-card {
+                padding: 1.2rem;
+            }
+
+            /* GIFT */
+            .gift-grid {
+                gap: 1rem;
+            }
+
+            .gift-card {
+                padding: 1.2rem;
+            }
+
+            /* BUSINESS */
+            .coming-soon-features {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
             }
         }
 
@@ -887,13 +1107,18 @@
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="navbar-brand">🎂 Arline's Birthday</div>
-        <ul class="nav-links">
+        <ul class="nav-links" id="navLinks">
             <li><a href="#home" class="nav-link active">Home</a></li>
             <li><a href="#gallery" class="nav-link">Gallery</a></li>
             <li><a href="#wishes" class="nav-link">Wishes</a></li>
             <li><a href="#gift" class="nav-link">Gift Ideas</a></li>
             <li><a href="#business" class="nav-link">Business</a></li>
         </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <button class="music-toggle" id="musicBtn">
             <i class="fas fa-music"></i> Music
         </button>
@@ -1153,6 +1378,21 @@
             duration: 800,
             easing: 'ease-in-out',
             once: true
+        });
+
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
         });
 
         // Music Control
