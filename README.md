@@ -1,6 +1,6 @@
 # 🎂 Happy Birthday Arline Antasya
 
-Website ulang tahun interaktif dan menarik untuk Arline Antasya - dibuat dengan penuh kasih sayang! 🎉
+Website ulang tahun interaktif dan menarik untuk Arline Antasya! 🎉
 
 ## ✨ Fitur Utama
 
