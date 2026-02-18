@@ -1431,7 +1431,7 @@
         }, { once: true });
 
         // Nav Links Active State
-        const navLinks = document.querySelectorAll('.nav-link');
+        const navLinkElements = document.querySelectorAll('.nav-link');
         const sections = document.querySelectorAll('section');
 
         window.addEventListener('scroll', () => {
@@ -1443,7 +1443,7 @@
                 }
             });
 
-            navLinks.forEach(link => {
+            navLinkElements.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href').slice(1) === current) {
                     link.classList.add('active');
