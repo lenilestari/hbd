@@ -1125,8 +1125,8 @@
     </nav>
 
     <!-- AUDIO -->
-    <audio id="bgMusic" loop volume="0.3">
-        <source src="birthday-music.mp3" type="audio/mpeg">
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
     </audio>
 
     <div class="main-container">
@@ -1400,25 +1400,35 @@
         const musicBtn = document.getElementById('musicBtn');
         let isPlaying = false;
 
+        // Set volume
+        music.volume = 0.3;
+
         musicBtn.addEventListener('click', () => {
             if (isPlaying) {
                 music.pause();
                 isPlaying = false;
                 musicBtn.innerHTML = '<i class="fas fa-music"></i> Music';
             } else {
-                music.play();
-                isPlaying = true;
-                musicBtn.innerHTML = '<i class="fas fa-pause"></i> Pause';
+                music.play().then(() => {
+                    isPlaying = true;
+                    musicBtn.innerHTML = '<i class="fas fa-pause"></i> Pause';
+                }).catch(err => {
+                    console.log("Autoplay blocked. Click to unmute browser audio.");
+                });
             }
         });
 
-        // Resume music on page interaction
+        // Try to play on first user interaction
         document.addEventListener('click', () => {
             if (!isPlaying && music.paused) {
-                music.play().catch(e => console.log("Audio autoplay blocked"));
-                isPlaying = true;
+                music.play().then(() => {
+                    isPlaying = true;
+                    musicBtn.innerHTML = '<i class="fas fa-pause"></i> Pause';
+                }).catch(err => {
+                    console.log("Audio autoplay blocked by browser");
+                });
             }
-        });
+        }, { once: true });
 
         // Nav Links Active State
         const navLinks = document.querySelectorAll('.nav-link');
