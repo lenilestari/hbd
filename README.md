@@ -10,7 +10,7 @@ Website ulang tahun interaktif dan menarik untuk Arline Antasya! 🎉
 - Call-to-action buttons menuju galeri dan ucapan
 
 ### 📸 Gallery
-- 8 foto dengan hover effect hati
+- 8 foto dengan hover effect
 - Animasi smooth saat scroll
 - Responsive grid layout
 
@@ -19,11 +19,6 @@ Website ulang tahun interaktif dan menarik untuk Arline Antasya! 🎉
 - 🙏 Doa Istimewa
 - 💖 Harapan & Impian
 - ⚡ Kata-Kata Motivasi
-
-### 🎁 Saran Hadiah
-- 6 ide hadiah menarik dengan harga estimasi
-- Deskripsi dan alasan untuk setiap hadiah
-- Design yang interaktif dan inspiring
 
 ### 🚀 Business Section
 - Coming soon display yang modern
@@ -113,4 +108,4 @@ Edit file `index.html` untuk:
 
 ---
 
-Made with ❤️ by Leni Lestari | Happy Birthday 2026 🎉
+Made with by Leni Lestari | Happy Birthday 2026 🎉
