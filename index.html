@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Arline Antasya ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            color: #333;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #667eea;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .music-toggle {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
+
+        .music-toggle:hover {
+            transform: scale(1.05);
+        }
+
+        /* MAIN CONTAINER */
+        .main-container {
+            margin-top: 80px;
+            min-height: 100vh;
+        }
+
+        /* ===== HALAMAN 1: HERO ===== */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(240, 147, 251, 0.1) 100%),
+                        linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(240, 147, 251, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -50%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 10vw, 5rem);
+            color: white;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            line-height: 1.2;
+        }
+
+        .hero-content .birthday-name {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #FFD700, #FFA500, #FF69B4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 1rem 0 2rem;
+        }
+
+        .birthday-date {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .counter {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .counter-item {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1.5rem;
+            border-radius: 15px;
+            min-width: 80px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .counter-item:nth-child(2) { animation-delay: 0.2s; }
+        .counter-item:nth-child(3) { animation-delay: 0.4s; }
+        .counter-item:nth-child(4) { animation-delay: 0.6s; }
+
+        .counter-item span {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+        }
+
+        .counter-item p {
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 0.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: white;
+            box-shadow: 0 8px 20px rgba(255, 165, 0, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 165, 0, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.9);
+            color: #667eea;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            background: white;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(30px) rotate(5deg); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* ===== GALLERY SECTION ===== */
+        .gallery-section {
+            min-height: 100vh;
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #999;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            height: 300px;
+            background: #f0f0f0;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(102, 126, 234, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .no-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            background: linear-gradient(135deg, #e0e7ff, #f3e8ff);
+            width: 100%;
+            height: 100%;
+        }
+
+        /* ===== WISHES SECTION ===== */
+        .wishes-section {
+            min-height: 100vh;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #f5f7ff 0%, #f0e4ff 100%);
+        }
+
+        .wishes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .wish-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            border-top: 4px solid;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wish-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .wish-card.birthday {
+            border-top-color: #FFD700;
+        }
+
+        .wish-card.birthday::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+        }
+
+        .wish-card.prayer {
+            border-top-color: #667eea;
+        }
+
+        .wish-card.prayer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .wish-card.hope {
+            border-top-color: #FF1493;
+        }
+
+        .wish-card.hope::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #FF69B4, #FF1493);
+        }
+
+        .wish-card.motivation {
+            border-top-color: #00CED1;
+        }
+
+        .wish-card.motivation::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #00CED1, #20B2AA);
+        }
+
+        .wish-card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .wish-card p {
+            line-height: 1.6;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .wish-card-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .birthday .wish-card-icon {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+        }
+
+        .prayer .wish-card-icon {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .hope .wish-card-icon {
+            background: linear-gradient(135deg, #FF69B4, #FF1493);
+        }
+
+        .motivation .wish-card-icon {
+            background: linear-gradient(135deg, #00CED1, #20B2AA);
+        }
+
+        /* ===== GIFT IDEAS SECTION ===== */
+        .gift-section {
+            min-height: 100vh;
+            padding: 4rem 2rem;
+            background: white;
+        }
+
+        .gift-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gift-card {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(240, 147, 251, 0.1));
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .gift-card:hover {
+            transform: translateY(-10px);
+            border-color: #667eea;
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+        }
+
+        .gift-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite;
+        }
+
+        .gift-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.7rem;
+            color: #333;
+        }
+
+        .gift-card p {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .gift-price {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .gift-reason {
+            font-size: 0.85rem;
+            color: #999;
+            font-style: italic;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-text {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .footer-details {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-detail {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .footer-detail strong {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            color: white;
+        }
+
+        .social-icon:hover {
+            background: rgba(255, 255, 255, 0.4);
+            transform: translateY(-5px);
+        }
+
+        /* ===== BUSINESS SECTION ===== */
+        .business-section {
+            min-height: 100vh;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a3e 50%, #2d1b4e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .business-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(240, 147, 251, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .business-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .coming-soon-wrapper {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 4rem 2rem;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .coming-soon-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+        }
+
+        .coming-soon-icon {
+            font-size: 5rem;
+            margin: 1.5rem 0;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .coming-soon-text {
+            font-size: 1.3rem;
+            color: #333;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .coming-soon-subtitle {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .coming-soon-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(240, 147, 251, 0.05));
+            border-radius: 20px;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1.5rem;
+            border-radius: 15px;
+            background: white;
+            transition: all 0.3s;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.15);
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(240, 147, 251, 0.05));
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+        }
+
+        .feature-text {
+            font-weight: 600;
+            color: #333;
+            font-size: 0.95rem;
+        }
+
+        .notify-section {
+            display: flex;
+            gap: 0.5rem;
+            max-width: 500px;
+            margin: 2.5rem auto;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .notify-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .notify-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .notify-btn {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .notify-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .notify-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .coming-soon-footer {
+            font-size: 0.95rem;
+            color: #999;
+            margin-top: 1.5rem;
+            font-style: italic;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .coming-soon-wrapper {
+                padding: 2rem 1.5rem;
+            }
+
+            .coming-soon-title {
+                font-size: 2rem;
+            }
+
+            .coming-soon-icon {
+                font-size: 3rem;
+            }
+
+            .coming-soon-features {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                padding: 1.5rem;
+            }
+
+            .feature-item {
+                padding: 1rem;
+            }
+
+            .feature-icon {
+                font-size: 2rem;
+            }
+
+            .notify-section {
+                flex-direction: column;
+            }
+
+            .notify-input {
+                min-width: 100%;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content .birthday-name {
+                font-size: 1.8rem;
+            }
+
+            .counter {
+                gap: 0.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* SCROLL ANIMATION */
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* CONFETTI */
+        .confetti {
+            position: fixed;
+            pointer-events: none;
+            font-size: 2rem;
+            animation: confettiFall 3s ease-out forwards;
+        }
+
+        @keyframes confettiFall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-brand">🎂 Arline's Birthday</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#gallery" class="nav-link">Gallery</a></li>
+            <li><a href="#wishes" class="nav-link">Wishes</a></li>
+            <li><a href="#gift" class="nav-link">Gift Ideas</a></li>
+            <li><a href="#business" class="nav-link">Business</a></li>
+        </ul>
+        <button class="music-toggle" id="musicBtn">
+            <i class="fas fa-music"></i> Music
+        </button>
+    </nav>
+
+    <!-- AUDIO -->
+    <audio id="bgMusic" loop volume="0.3">
+        <source src="birthday-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="main-container">
+        <!-- HERO SECTION -->
+        <section class="hero-section" id="home">
+            <div class="hero-content">
+                <h1>Happy Birthday!</h1>
+                <h2 class="birthday-name">Arline Antasya</h2>
+                <p class="birthday-date">18 Februari 2000</p>
+                <p>Anak Pertama yang keren abiezz</p>
+                
+                <div class="counter">
+                    <div class="counter-item">
+                        <span id="age">26</span>
+                        <p>Tahun</p>
+                    </div>
+                    <div class="counter-item">
+                        <span>∞</span>
+                        <p>Bahagia</p>
+                    </div>
+                    <div class="counter-item">
+                        <span id="dayOfYear">49</span>
+                        <p>Hari Istimewa</p>
+                    </div>
+                    <div class="counter-item">
+                        <span>✨</span>
+                        <p>Bersinar</p>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#gallery" class="btn btn-primary">Lihat Galeri Foto</a>
+                    <a href="#wishes" class="btn btn-secondary">Baca Ucapan Spesial</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+        <section class="gallery-section" id="gallery" data-aos="fade-up">
+            <h2 class="section-title">📸 Momen Berharga</h2>
+            <p class="section-subtitle">8 Foto terepik di galeri aku au</p>
+            
+            <div class="gallery-grid">
+                <!-- 8 Foto -->
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="foto/foto-1.jpeg" alt="Foto 1">
+                    <div class="gallery-oveerlay"></div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="foto/foto-2.jpeg" alt="Foto 2">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="foto/foto-3.jpeg" alt="Foto 3">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+                    <img src="foto/foto-4.jpeg" alt="Foto 4">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="500">
+                    <img src="foto/foto-5.jpeg" alt="Foto 5">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="600">
+                    <img src="foto/foto-6.jpeg" alt="Foto 6">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="700">
+                    <img src="foto/foto-7.jpeg" alt="Foto 7">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="800">
+                    <img src="foto/foto-8.jpeg" alt="Foto 8">
+                    <div class="gallery-overlay"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WISHES SECTION -->
+        <section class="wishes-section" id="wishes" data-aos="fade-up">
+            <h2 class="section-title">Ucapan Spesial</h2>
+            <p class="section-subtitle">Kumpulan doa, harapan, dan semangat aziik</p>
+            
+            <div class="wishes-grid">
+                <!-- BIRTHDAY WISHES -->
+                <div class="wish-card birthday" data-aos="fade-up" data-aos-delay="100">
+                    <div class="wish-card-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3 class="wish-card-title">🎂 Ucapan Ulang Tahun</h3>
+                    <p>
+                        <strong>Selamat Ulang Tahun, Arline!</strong><br><br>
+                        Semoga makin sehat, makin kuat, dan makin ikhlas. Kata-kata semangat dari saya sepertinya tidak akan berpengaruh sama kehidupan kamu
+                        tapi mungkin saja dopamine ringan. Allah memberikan cobaan tidak mungkin dikuar kuasa hambahnya.
+                    </p>
+                </div>
+
+                <!-- PRAYER -->
+                <div class="wish-card prayer" data-aos="fade-up" data-aos-delay="200">
+                    <div class="wish-card-icon">
+                        <i class="fas fa-hands-praying"></i>
+                    </div>
+                    <h3 class="wish-card-title">🙏 Ucapan Doa</h3>
+                    <p>
+                        <strong>Doa Istimewa azeek</strong><br><br>
+                        Semoga Allah selalu melindungimu dalam setiap langkah perjalananmu. 
+                        Diberi kesehatan yang prima, duit yang selalu menyala dan pacar 3
+                    </p>
+                </div>
+
+                <!-- HOPE & WISHES -->
+                <div class="wish-card hope" data-aos="fade-up" data-aos-delay="300">
+                    <div class="wish-card-icon">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="wish-card-title">💖 Harapan Kami</h3>
+                    <p>
+                        <strong>Impian dan Harapan</strong><br><br>
+                        Kami berharap tahun ini membawamu lebih dekat ke impian-impianmu terbesar. 
+                        Semoga semua rencana yang telah kamu persiapkan terwujud dengan sempurna. 
+                        Harapan kami adalah melihatmu terus berkembang, belajar, dan tumbuh menjadi versi terbaik dari dirimu. 
+                        Kamu mampu mencapai apa pun yang kamu targetkan! ini ai saja aku mau kekampus eaa. Ntar setelah kelas baru aku tambah kata kata dari aku
+                    </p>
+                </div>
+
+                <!-- MOTIVATION -->
+                <div class="wish-card motivation" data-aos="fade-up" data-aos-delay="400">
+                    <div class="wish-card-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="wish-card-title">Kata-Kata Motivasi</h3>
+                    <p>
+                        <strong>"Setiap hari adalah kesempatan baru untuk bersinar lebih terang"</strong><br><br>
+                        Kamu adalah seorang yang kuat, cerdas, dan penuh dengan potensi tak terbatas. 
+                        Jangan pernah ragu untuk bermimpi besar dan ambil langkah untuk mewujudkannya. 
+                        Setiap tantangan adalah kesempatan untuk belajar dan berkembang. 
+                        Kami percaya padamu dan selalu mendukung setiap langkah keberhasilanmu! 💪
+                    </p>
+                </div>
+
+                <!-- Motivation 2 -->
+                          <div class="wish-card motivation" data-aos="fade-up" data-aos-delay="400">
+                    <div class="wish-card-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="wish-card-title">Kata-Kata Motivasi</h3>
+                    <p>
+                        <strong>"Lorep ipsum"</strong><br><br>
+                        Lorep ipsum 💪
+                    </p>
+                </div>
+
+                <div class="wish-card motivation" data-aos="fade-up" data-aos-delay="400">
+                    <div class="wish-card-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="wish-card-title">Kata-Kata Motivasi</h3>
+                    <p>
+                        <strong>"Lorep ipsum"</strong><br><br>
+                        Lorep ipsum 💪
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BUSINESS HEADER SECTION -->
+        <section class="business-section" id="business" data-aos="fade-up">
+            <div class="business-container">
+                <div class="coming-soon-wrapper">
+                    <div class="coming-soon-content">
+                        <h2 class="coming-soon-title">Bisnis & Layanan</h2>
+                        <div class="coming-soon-icon">🚀</div>
+                        <p class="coming-soon-text">Bagian ini masih dalam pengembangan</p>
+                        <p class="coming-soon-subtitle">Kami sedang menyiapkan sesuatu yang istimewa untuk Anda.<br>Jadilah yang pertama tahu dengan menantikan update selanjutnya!</p>
+                        
+                        <div class="coming-soon-features">
+                            <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                                <div class="feature-icon">💼</div>
+                                <div class="feature-text">Portofolio Bisnis</div>
+                            </div>
+                            <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                                <div class="feature-icon">🎯</div>
+                                <div class="feature-text">Layanan Unggulan</div>
+                            </div>
+                            <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                                <div class="feature-icon">📊</div>
+                                <div class="feature-text">Portfolio & Penawaran</div>
+                            </div>
+                            <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+                                <div class="feature-icon">💬</div>
+                                <div class="feature-text">Hubungi Kami</div>
+                            </div>
+                        </div>
+
+                        <div class="notify-section">
+                            <input type="email" placeholder="Masukkan email Anda" class="notify-input">
+                            <button class="notify-btn">Beritahu Saya</button>
+                        </div>
+
+                        <p class="coming-soon-footer">✨ Membangun sesuatu yang luar biasa ✨</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-content">
+                <h3 style="font-size: 2rem; margin-bottom: 1rem;">✨ Terima Kasih! ✨</h3>
+                <p class="footer-text">
+                    Terima kasih telah merayakan hari istimewa ini bersama. 
+                    Kehadiran dan doa kalian adalah hadiah terbesar bagi saya. ini ai
+                </p>
+
+                <div class="footer-details">
+                    <div class="footer-detail">
+                        <strong>👩 Nama</strong>
+                        Arline Antasya
+                    </div>
+                    <div class="footer-detail">
+                        <strong>🎂 Lahir</strong>
+                        18 Februari 2000
+                    </div>
+                    <div class="footer-detail">
+                        <strong>👑 Posisi</strong>
+                        Anak Pertama
+                    </div>
+                </div>
+
+                <div class="footer-social">
+                    <div class="social-icon"><i class="fab fa-instagram"></i></div>
+                    <div class="social-icon"><i class="fab fa-twitter"></i></div>
+                    <div class="social-icon"><i class="fab fa-facebook"></i></div>
+                    <div class="social-icon"><i class="fab fa-whatsapp"></i></div>
+                </div>
+
+                <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+                    Made with Leni Lestari | Happy Birthday 2026
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Music Control
+        const music = document.getElementById('bgMusic');
+        const musicBtn = document.getElementById('musicBtn');
+        let isPlaying = false;
+
+        musicBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                music.pause();
+                isPlaying = false;
+                musicBtn.innerHTML = '<i class="fas fa-music"></i> Music';
+            } else {
+                music.play();
+                isPlaying = true;
+                musicBtn.innerHTML = '<i class="fas fa-pause"></i> Pause';
+            }
+        });
+
+        // Resume music on page interaction
+        document.addEventListener('click', () => {
+            if (!isPlaying && music.paused) {
+                music.play().catch(e => console.log("Audio autoplay blocked"));
+                isPlaying = true;
+            }
+        });
+
+        // Nav Links Active State
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Calculate Age
+        function calculateAge() {
+            const birthDate = new Date('2000-02-18');
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDiff = today.getMonth() - birthDate.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            document.getElementById('age').textContent = age;
+        }
+
+        // Calculate Day of Year
+        function calculateDayOfYear() {
+            const today = new Date();
+            const startOfYear = new Date(today.getFullYear(), 0, 0);
+            const diff = today - startOfYear;
+            const dayOfYear = Math.floor(diff / 86400000);
+            document.getElementById('dayOfYear').textContent = dayOfYear;
+        }
+
+        calculateAge();
+        calculateDayOfYear();
+
+        // Confetti Effect
+        function createConfetti() {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            confetti.textContent = ['🎉', '🎊', '🎈', '✨', '🎁', '❤️', '🌟'][Math.floor(Math.random() * 7)];
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.top = '-20px';
+            confetti.style.opacity = Math.random() * 0.5 + 0.5;
+            confetti.style.fontSize = Math.random() * 20 + 20 + 'px';
+            document.body.appendChild(confetti);
+            setTimeout(() => confetti.remove(), 3000);
+        }
+
+        // Trigger confetti on scroll
+        window.addEventListener('scroll', () => {
+            if (Math.random() < 0.1) createConfetti();
+        });
+
+        // Create confetti on load
+        for (let i = 0; i < 5; i++) {
+            setTimeout(() => createConfetti(), i * 300);
+        }
+    </script>
+</body>
+</html>
